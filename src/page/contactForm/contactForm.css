@@ -1,0 +1,142 @@
+:root {
+  --red_color: #a00000;
+  --darkRed_color: #820000;
+  --header_color: #bdb1a5;
+  --icon_color: #cf0000;
+  --Btn_color: #7D0A0A;
+  --p_color: #7b7b7b;
+  --bg_color: #f3f3f3;
+  --white_color: #fff;
+  --color_heading: #253237;
+  --border_color: #d6d6d6d5;
+}
+
+.ContactForm{
+  margin: 20px 0;
+}
+.ContactForm .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+}
+.ContactForm .header{
+  text-align: center;
+  margin-bottom: 60px;
+}
+.ContactForm .header .paragraph {
+  margin: 10px 0;
+}
+.border {
+  margin-top: 7px;
+  padding: 1.5px;
+  background-color: var(--border_color);
+}
+.ContactForm .content{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.ContactForm .content .form {
+  width: 100%;
+}
+.ContactForm .content .form form{
+  display: flex;
+  flex-direction: column;
+}
+
+.ContactForm .content .form .nameInput{
+  display: flex;
+  gap: 1.5rem;
+}
+.ContactForm .content .form .firstName, .secondName{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.ContactForm .content .form input,textarea {
+  padding: 15px 17px;
+  font-size: 16px;
+  color: #111827; 
+  border-radius: 7px;
+  border-bottom: 2px solid;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ContactForm .content .form label{
+  font-size: 18px;
+  color: var(--color_heading);
+  margin: 10px 0;
+}
+.ContactForm .content .contactInfo{
+  width: 100%;
+}
+.ContactForm .content .contactInfo h2{
+  color: var(--red_color);
+  font-family: serif;
+  font-size: xx-large;
+}
+.ContactForm .content .contactInfo p{
+  max-width: 450px;
+  margin: 40px 0;
+}
+.ContactForm .content .contactInfo strong{
+  color: var(--color_heading);
+}
+.ContactForm .content .contactInfo .infoDetails div{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.ContactForm .content .contactInfo .infoDetails svg{
+  font-size: large;
+  fill: var(--red_color);
+}
+.ContactForm .content .contactInfo .infoDetails span{
+  color: var(--color_heading);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ContactForm .content .contactInfo .icons{
+  display: flex;
+  gap: 15px;
+  margin: 30px;
+}
+
+.ContactForm .content .contactInfo .icons a {
+  font-size: 16px;
+  color: var(--color_heading);
+  background-color: var(--bg_color);
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.ContactForm .content .contactInfo .icons a:hover {
+  color: var(--white_color);
+  background-color: var(--red_color);
+  transform: scale(1.1);
+}
+
+.ContactForm .content .submitBtn{
+  width: max-content;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  background: var(--red_color);
+  color: var(--white_color);
+  border: 1.5px solid var(--red_color);
+  align-self: flex-end;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.ContactForm .content .submitBtn:hover{
+  background: transparent;
+  color: var(--red_color);
+  border: 1.5px solid var(--red_color);
+}

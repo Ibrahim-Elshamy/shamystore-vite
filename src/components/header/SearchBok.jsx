@@ -1,0 +1,77 @@
+import React, { useState } from 'react'
+import { useEffect } from 'react';
+import { FaSearch } from 'react-icons/fa';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import "./header.css";
+
+function SearchBok() {
+
+  const [searchTerm, setSearchTerm] = useState("")
+  const [suggestions, setSuggestions] = useState([])
+  const location = useLocation()
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if(searchTerm.trim()) {
+      navigate(`/search?query=${encodeURIComponent(searchTerm.trim())}`)
+    }
+    setSuggestions([])
+  }
+
+  useEffect(() =>{
+    const fetchSuggestions = async () => {
+      if (!searchTerm.trim()) {
+        setSuggestions([]);
+        return;
+      }
+      try{
+        const res = await fetch(`https://dummyjson.com/products/search?q=${searchTerm}`)
+        const data  = await res.json()
+        setSuggestions(data.products.slice(0 ,5) || [])
+      } catch(error) {
+        console.log("Search Error: ", error);
+        setSuggestions([])
+      }
+    }
+    const debonuce =  setTimeout(() => {
+      fetchSuggestions()
+    }, 300);
+    return () => clearTimeout(debonuce);
+  }, [searchTerm])
+  
+  useEffect(() => {
+    setSuggestions([])
+  }, [location]);
+  return (
+    <div className="searchBox_container">
+      <form onSubmit={handleSubmit} className="search_box">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search For Products"
+          onChange={(e) => setSearchTerm(e.target.value)}
+          autoComplete="off"
+        />
+        <button type="submit">
+          <FaSearch />
+        </button>
+      </form>
+      {suggestions.length > 0 && (
+        <ul className="suggestions">
+          {suggestions.map((item) => (
+            <Link to={`/products/${item.id}`} key={item.id}>
+              <li>
+                <img src={item.images[0]} alt={item.title} />
+                <span>{item.title}</span>
+              </li>
+            </Link>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+export default SearchBok

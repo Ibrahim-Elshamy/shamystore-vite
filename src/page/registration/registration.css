@@ -1,0 +1,112 @@
+:root {
+  --red_color: #a00000;
+  --darkRed_color: #820000;
+  --header_color: #bdb1a5;
+  --icon_color: #cf0000;
+  --Btn_color: #7D0A0A;
+  --p_color: #7b7b7b;
+  --bg_color: #f3f3f3;
+  --white_color: #fff;
+  --color_heading: #253237;
+  --border_color: #d6d6d6d5;
+}
+.registeration{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100%; */
+}
+
+.registeration .parent {
+  width: 40%;
+  padding: 25px;
+  border: 1.5px solid;
+  background-color: rgb(236, 236, 236);
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.1);
+}
+.login .parent{
+  margin-top: 130px;
+}
+.registeration .logTitle, .regTitle{
+  text-align: center;
+  color: var(--darkRed_color);
+}
+.registeration .logTitle{
+  margin-top: 50px;
+}
+.registeration .loginIcon{
+  padding: 10px 10px 0 10px;
+  background-color: #ece3e3;
+  width: fit-content;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  font-size: 100px;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.registeration .loginIcon svg{
+  margin-bottom: -25px;
+}
+.registeration .content .form form{
+  display: flex;
+  flex-direction: column;
+}
+.registeration .content .form input {
+  padding: 15px 17px;
+  font-size: 16px;
+  color: #111827; 
+  border-radius: 7px;
+  border-bottom: 2px solid;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.registeration .content .form label{
+  font-size: 18px;
+  color: var(--color_heading);
+  margin: 10px 0;
+}
+
+.registeration .content .submitBtn{
+  width: max-content;
+  padding: 15px 60px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  background: var(--red_color);
+  color: var(--white_color);
+  border: 1.5px solid var(--red_color);
+  align-self: center;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  margin: 20px 0;
+}
+
+.registeration .content .submitBtn:hover{
+  background: transparent;
+  color: var(--red_color);
+  border: 1.5px solid var(--red_color);
+}
+
+/* regitser page */
+.registeration .content .form .nameInput{
+  display: flex;
+  gap: 1.5rem;
+}
+.registeration .content .form .firstName, .secondName{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.register .parent{
+  margin-top: 20px;
+}
+.regHere{
+  color: var(--darkRed_color);
+}

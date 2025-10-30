@@ -1,0 +1,49 @@
+:root {
+  --red_color: #a00000;
+  --darkRed_color: #820000;
+  --header_color: #bdb1a5;
+  --icon_color: #cf0000;
+  --Btn_color: #7D0A0A;
+  --p_color: #7b7b7b;
+  --bg_color: #f3f3f3;
+  --white_color: #fff;
+  --color_heading: #253237;
+  --border_color: #d6d6d6d5;
+}
+
+.swiper-pegination-bullet-active{
+    background-color: var(--darkRed_color) !important;
+    color: var(--darkRed_color) !important;
+}
+.hero{
+    position: relative;
+    margin-bottom: 80px;
+    padding-top: 10px;
+}
+
+.swiper-slide .content{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+.swiper-slide .content h4{
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 0.4vw;
+}
+.swiper-slide .content h3{
+    font-size: 3vw;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    color: var(--darkRed_color);
+    font-weight: bolder;
+    line-height: 1.1;
+}
+.swiper-slide .content p{
+    font-size: 1.1vw;
+    margin: 2.5vw 0;
+}
