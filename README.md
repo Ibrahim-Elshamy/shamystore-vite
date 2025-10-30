@@ -1,4 +1,5 @@
 Shamystore is a modern and responsive e-commerce web application built with React + Vite.
+
 It uses dummy JSON product data to simulate a real online shopping experience — including product listings, categories, and interactive UI elements.
 
 The project showcases clean design, smooth animations, and best practices in React development.
@@ -27,8 +28,8 @@ Notifications: React Hot Toast
 
 
 
-Future Enhancements:
 
+Future Enhancements:
 
 Dark Mode — Add a light/dark theme toggle for better accessibility.
 
