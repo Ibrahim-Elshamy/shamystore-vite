@@ -4,23 +4,26 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
+import mackbook from "../img/MacBook.jpeg"
+import PlayStation from "../img/PlayStation.jpeg"
+import Wardrobe from "../img/Todos los.jpeg"
 
 const heroData = [
   {
     name: "mackBook air",
     Description: "perfect for work, study, and creativity.",
-    image: "/src/img/MacBook.jpeg",
+    image: mackbook,
   },
   {
     name: "PlayStation 5",
     Description:
       "An immersive entertainment experience for next-generation games. ",
-    image: "/src/img/PlayStation.jpeg",
+    image: PlayStation,
   },
   {
     name: "Wardrobe",
     Description: "A spacious and stylish storage unit designed to keep yours",
-    image: "/src/img/Todos los.jpeg",
+    image: Wardrobe,
   },
 ];
 
