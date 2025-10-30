@@ -36,3 +36,5 @@ Dark Mode — Add a light/dark theme toggle for better accessibility.
 Checkout & Payment Gateway.
 
 API Integration — Replace dummy JSON data with a real backend API.
+
+Live Demo: https://shamystore-vite.vercel.app/
